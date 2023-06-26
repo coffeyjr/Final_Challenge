@@ -1,0 +1,172 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+img, picture {
+    max-width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1em;
+    position: relative;
+}
+
+/* NAV */
+
+header {
+    background: #2E323F;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #A59678;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 20px;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item {
+    margin-top: .75em;
+}
+
+.nav__list--primary {
+    margin-bottom: 2em;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .2px;
+
+}
+
+.nav__link--button {
+    padding: .35em 1em;
+    background: #A59678;
+    border-radius: 100px;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    opacity: .75;
+}
+
+.logo {
+    height: 30px;
+}
+
+@media (min-width: 800px) {
+
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: auto;
+        position: relative;
+    }
+
+    .nav__list {
+        display: flex;
+        margin: 0;
+    }
+
+    .nav__item {
+        margin: 0 0 0 2.5em;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    
+}
